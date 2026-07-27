@@ -121,4 +121,36 @@ switch (diaSemana) {
         break;
 }
 
+// Bucles e Iteradores (while y for)
+// Los bucles (o loops) se utilizan para repetir un bloque de código múltiples veces de forma automática, ahorrándonos escribir la misma instrucción una y otra vez.
 
+// Es el bucle más utilizado cuando sabes de antemano cuántas veces quieres repetir una acción
+
+// Imprimir los números del 0 al 4
+for (let i = 0; i < 5; i++) {
+    console.log("El número actual es: " + i);
+}
+
+// Ejemplo práctico recorriendo un Array:
+let frutas = ["manzana", "banana", "pera", "naranja"];
+
+for (let i = 0; i < frutas.length; i++) {
+    console.log("Fruta en la posición " + i + ": " + frutas[i]);
+}
+
+// El Bucle while
+// Se utiliza cuando no sabes cuántas veces se va a repetir la acción, pero sabes que debe continuar mientras una condición se cumpla.
+
+// Precaución: Debes asegurarte de que la condición cambie en algún momento dentro del bucle; de lo contrario, crearás un "bucle infinito"
+
+let vidas = 3;
+
+// Mientras al usuario le queden vidas, el juego continúa
+while (vidas > 0) {
+    console.log("Estás jugando. Vidas restantes: " + vidas);
+    
+    // Simulamos que el jugador pierde una vida en cada turno
+    vidas--; 
+}
+
+console.log("¡Game Over!");
