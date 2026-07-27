@@ -154,3 +154,36 @@ while (vidas > 0) {
 }
 
 console.log("¡Game Over!");
+
+// El return es la instrucción que permite a una función devolver un resultado hacia afuera y, al mismo tiempo,
+//  finaliza la ejecución de esa función de forma inmediata.
+
+// Funciones en JavaScript
+// Una función es un bloque de código diseñado para realizar una tarea específica. Se ejecuta cuando "es llamada" (invocada).
+
+// Declaración de la función
+function saludar() {
+    console.log("¡Hola, bienvenido a la programación!");
+}
+
+// Invocación o llamada a la función (aquí es donde se ejecuta)
+saludar(); // Muestra en consola: ¡Hola, bienvenido a la programación!
+
+// 'nombre' y 'apellido' son los parámetros
+function saludarPersona(nombre, apellido) {
+    console.log("Hola, " + nombre + " " + apellido);
+}
+
+// "Carlos" y "López" son los argumentos
+saludarPersona("Carlos", "López"); // Muestra: Hola, Carlos López
+
+// Funciones con return
+// El return es la instrucción que permite a una función devolver un resultado hacia afuera y, al mismo tiempo, finaliza la ejecución de esa función de forma inmediata.
+function multiplicar(a, b) {
+    return a * b; // Devuelve el producto
+}
+
+// Guardamos el resultado devuelto en una variable
+let resultado = multiplicar(4, 5);
+console.log(resultado); // Muestra: 20
+
