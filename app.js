@@ -187,3 +187,95 @@ function multiplicar(a, b) {
 let resultado = multiplicar(4, 5);
 console.log(resultado); // Muestra: 20
 
+////////////////////////////// clase dos 
+
+// ¿Qué es un Array (Arreglo)?
+// Un array es una estructura de datos que nos permite almacenar una lista ordenada de elementos dentro de una sola variable
+
+let fruta = ["manzana", "banana", "pera", "naranja"];
+
+console.log(fruta[0]); // Muestra: "manzana" (el primer elemento)
+
+console.log(fruta.length); // Muestra: 4
+
+// Truco para acceder siempre al último elemento sin importar cuántos sean:
+console.log(fruta[fruta.length - 1]); // Muestra: "naranja"
+
+// Recorrer el array completo con un bucle for
+for (let i = 0; i < fruta.length; i++) {
+    console.log("Fruta en la posición " + i + ": " + fruta[i]);
+}
+
+// Los métodos son funciones integradas en JavaScript que facilitan la manipulación y consulta de los arrays
+let colores = ["rojo", "verde"];
+
+colores.push("azul");     // ["rojo", "verde", "azul"]
+colores.unshift("amarillo"); // ["amarillo", "rojo", "verde", "azul"]
+
+colores.pop();            // Elimina "azul" -> ["amarillo", "rojo", "verde"]
+colores.shift();          // Elimina "amarillo" -> ["rojo", "verde"]
+
+
+// .includes(): Verifica si un elemento existe dentro del array. Devuelve true o false.
+
+// .indexOf(): Devuelve el índice (la posición) de la primera aparición de un elemento. Si no lo encuentra, devuelve -1.
+
+
+let numeros = [10, 20, 30, 40];
+
+console.log(numeros.includes(30)); // Muestra: true
+console.log(numeros.indexOf(20));  // Muestra: 1 (posición del número 20)
+console.log(numeros.indexOf(99));  // Muestra: -1 (no existe)
+
+// objetos:
+
+const cursoProgramacion = {
+    // 1. Strings
+    titulo: "JavaScript desde Cero",
+    
+    
+    // 2. Numbers
+    duracionHoras: 45,
+    precio: 49.99,
+    
+    // 3. Booleans
+    estaActivo: true,
+    certificadoIncluido: true,
+    
+    // 4. Null y Undefined
+    descuentoEspecial: null, // No hay descuento activo por ahora
+    fechaFinalizacion: undefined, // Aún no está definido porque el curso sigue abierto
+
+    // 5. Array
+    tecnologias: ["HTML", "CSS", "JavaScript", "Git"],
+
+    // 6. Objeto Anidado (un objeto dentro de otro)
+    instructor: {
+        nombre: "Mariana",
+        experienciaAnios: 8,
+        contacto: {
+            email: "mariana@codeamos.com",
+            redSocial: "@marianadev"
+        }
+    },
+
+    // 7. Método (Función interna tradicional)
+    obtenerInformacionCompleta() {
+        return `El curso "${this.titulo}" dura ${this.duracionHoras} horas y es dictado por ${this.instructor.nombre}.`;
+    },
+
+    // 8. Método para listar tecnologías usando un bucle interno
+    mostrarTecnologias() {
+        console.log("Tecnologías que aprenderás:");
+        for (let i = 0; i < this.tecnologias.length; i++) {
+            console.log(`- ${this.tecnologias[i]}`);
+        }
+    }
+};
+
+// --- Probando el objeto ---
+console.log(cursoProgramacion.titulo);                          // String: "JavaScript desde Cero"
+console.log(cursoProgramacion.instructor.contacto.email);       // Objeto anidado: "mariana@codeamos.com"
+console.log(cursoProgramacion.obtenerInformacionCompleta());    // Ejecutando el método 1
+cursoProgramacion.mostrarTecnologias();
+console.log(cursoProgramacion.tecnologias);
